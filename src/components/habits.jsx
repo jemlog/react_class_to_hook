@@ -16,6 +16,7 @@ const habits = (props) => {
           />
         ))}
       </ul>
+      <button onClick={props.onReset}>all reset</button>
     </>
   );
 };

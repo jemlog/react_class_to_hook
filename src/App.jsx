@@ -42,6 +42,17 @@ const App = () => {
     setHabits(items);
   };
 
+  const reset = () => {
+    const items = habits.map((item) => {
+      if (item.count !== 0) {
+        item.count = 0;
+        return item;
+      }
+      return item;
+    });
+    setHabits(items);
+  };
+
   return (
     <>
       <Navbar />
@@ -51,6 +62,7 @@ const App = () => {
         onDecrement={handleDecrement}
         onDelete={handleDelete}
         onAdd={handleAdd}
+        onReset={reset}
       />
     </>
   );
