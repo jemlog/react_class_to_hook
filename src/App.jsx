@@ -37,7 +37,10 @@ const App = () => {
     setHabits(items);
   });
 
-  const handleAdd = () => {};
+  const handleAdd = (name) => {
+    const items = [{ id: Date.now(), name, count: 0 }, ...habits];
+    setHabits(items);
+  };
 
   return (
     <>
@@ -47,6 +50,7 @@ const App = () => {
         onIncrement={handleIncrement}
         onDecrement={handleDecrement}
         onDelete={handleDelete}
+        onAdd={handleAdd}
       />
     </>
   );
